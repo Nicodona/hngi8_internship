@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume form</title>
+</head>
+<body>
+<h1 style="padding: 3px 100px"> please fill the form below to create your resume. and see your resume b</h1>
+
+<form style="padding: 3px 100px" method="post">
+    {{ csrf_token }}
+    <h3> your basic info</h3>
+    <label style="font-size: 25px">name</label><br>
+    <input type="text" name="name" placeholder="your name" style="height: 35px; width: 900px"><br>
+    <label style="font-size: 25px">email</label><br>
+    <input type="text" name="email" placeholder="your email" style="height: 35px; width: 900px"><br>
+    <label style="font-size: 25px">date of birth:</label><br>
+    <input type="text" name="email" placeholder="dd/mm/yyyy" style="height: 35px; width: 900px"><br>
+    <label style="font-size: 25px">phone:</label><br>
+    <input type="text" name="phone" placeholder="your phone" style="height: 35px; width: 900px"><br>
+    <label style="font-size: 25px">brief description:</label><br>
+    <textarea name="description" style="height: 35px; width: 900px"></textarea><br>
+    <h3> current job</h3>
+    <label style="font-size: 25px">current job:</label><br>
+    <input type="text" name="job" placeholder="your current job" style="height: 35px; width: 900px"><br>
+    <h3> qualification</h3>
+    <label style="font-size: 25px">highiest degree:</label><br>
+    <input type="text" name="degree" placeholder="your highiest degree" style="height: 35px; width: 900px"><br>
+    <label style="font-size: 25px">date of highiest degree:</label><br>
+    <input type="text" name="dod" placeholder="format dd/mm/yyyy" style="height: 35px; width: 900px"><br>
+    <h3> experience </h3>
+    <label style="font-size: 25px">experience:</label><br>
+    <input type="text" name="job_experience" placeholder="your experience" style="height: 35px; width: 900px"><br>
+    <label style="font-size: 25px">years of experience:</label><br>
+    <input type="text" name="YoE" placeholder="you years of job experience" style="height: 35px; width: 900px"><br>
+    <label style="font-size: 25px"> job description</label><br>
+    <textarea name="jd"style="height: 35px; width: 900px"></textarea><br>
+    <input type="submit" placeholder="submit"><br>
+</form>
+
+<div style="background-color: gray">
+<div style="padding: 3px 4px 3px 900px">
+    <h3> name</h3>
+    <h3> email</h3>
+    <h3> phone</h3>
+    <h3> date of birth</h3>
+</div>
+
+
+<div style="padding: 3px 700px 3px 100px">
+    <p> leougdhjhWEFDKSGJLBYEAWGFLBDSHGWEYUgyufwdgejsgbkfabhfBFKJHydguktbeywgasDVetawgsbd ZGHvqw qeyygarbeiqvq dwfygwebvyudVX WUK6FGEWQH YUQDWV HQWDFYGVQWDV6yvqdvygv</p>
+
+<div>
+    <h2> Current Job</h2>
+    <h2> Highiest degree</h2>
+    <h3> date obtain </h3>
+    <h2> experience </h2>
+    <p> job title</p>
+    <p> year obtained </p>
+    <p> job description </p>
+</div>
+</div>
+    </div>
+
+</body>
+</html>
