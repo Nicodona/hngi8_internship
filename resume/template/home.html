@@ -8,14 +8,14 @@
 <h1 style="padding: 3px 100px"> please fill the form below to create your resume. and see your resume b</h1>
 
 <form style="padding: 3px 100px" method="post">
-    {{ csrf_token }}
+    {% csrf_token %}
     <h3> your basic info</h3>
     <label style="font-size: 25px">name</label><br>
     <input type="text" name="name" placeholder="your name" style="height: 35px; width: 900px"><br>
     <label style="font-size: 25px">email</label><br>
     <input type="text" name="email" placeholder="your email" style="height: 35px; width: 900px"><br>
     <label style="font-size: 25px">date of birth:</label><br>
-    <input type="text" name="email" placeholder="dd/mm/yyyy" style="height: 35px; width: 900px"><br>
+    <input type="text" name="dob" placeholder="dd/mm/yyyy" style="height: 35px; width: 900px"><br>
     <label style="font-size: 25px">phone:</label><br>
     <input type="text" name="phone" placeholder="your phone" style="height: 35px; width: 900px"><br>
     <label style="font-size: 25px">brief description:</label><br>
@@ -38,29 +38,41 @@
     <input type="submit" placeholder="submit"><br>
 </form>
 
-<div style="background-color: gray">
-<div style="padding: 3px 4px 3px 900px">
-    <h3> name</h3>
-    <h3> email</h3>
-    <h3> phone</h3>
-    <h3> date of birth</h3>
+
+{% for record in records %}
+<div style="background-color: slategray">
+<div style="padding: 3px 4px 3px 1500px; backgroud-color:gray">
+    <h2> address </h2>
+    <h3> {{record.name}}</h3>
+    <h3>{{ record.email}}</h3>
+    <h3>{{record.phone}}</h3>
+    <h3> {{record.date_of_birth}}</h3>
 </div>
+<hr>
 
 
 <div style="padding: 3px 700px 3px 100px">
-    <p> leougdhjhWEFDKSGJLBYEAWGFLBDSHGWEYUgyufwdgejsgbkfabhfBFKJHydguktbeywgasDVetawgsbd ZGHvqw qeyygarbeiqvq dwfygwebvyudVX WUK6FGEWQH YUQDWV HQWDFYGVQWDV6yvqdvygv</p>
-
+    <h3>About me</h3>
+    <p>{{record.description}}</p>
 <div>
     <h2> Current Job</h2>
+    <p>{{record.job}}</p>
     <h2> Highiest degree</h2>
-    <h3> date obtain </h3>
+    <h3> obtained in {{record.dod}} </h3>
     <h2> experience </h2>
-    <p> job title</p>
-    <p> year obtained </p>
-    <p> job description </p>
+    <p>{{record.experience}}</p>
+    <h3> job title</h3>
+    <p2> {{record.job}}</p2>
+    <h3> years of experience </h3>
+    <p>{{record.YoE}}</p>
+    <h3> job description </h3>
+    <p>{{record.job_desc}}</p>
+    <h3> references </h3>
+    <br>
+    <h3>links</h3>
 </div>
 </div>
     </div>
-
+{% endfor %}
 </body>
 </html>
